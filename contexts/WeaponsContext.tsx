@@ -17,7 +17,6 @@ export interface Weapon {
   serialNumber: string;
 }
 
-
 interface WeaponsContextType {
   weapons: Weapon[];
   addWeapon: (weapon: Weapon) => void;

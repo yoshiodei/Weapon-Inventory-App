@@ -78,6 +78,9 @@ export function SettingsPage() {
   };
 
   const handleRemoveWeaponType = (type: string) => {
+    const confirmDelete = window.confirm(`Are you sure you want to delete the weapon type "${type}"? This action cannot be undone.`);
+    if (!confirmDelete) return;
+
     deleteWeaponType(type);
 
     addHistory(
@@ -108,6 +111,9 @@ export function SettingsPage() {
   };
 
   const handleRemoveCollection = (collection: string) => {
+    const confirmDelete = window.confirm(`Are you sure you want to delete the collection "${collection}"? This action cannot be undone.`);
+    if (!confirmDelete) return;
+
     deleteCollection(collection);
 
     addHistory(
